@@ -1,9 +1,11 @@
-# This is Setting created for the real machine
-# (In Virtual Machines, Clock is incorrect.)
-# PS1="[\d \@] \[\e[1;37m\]\w \[\e[0;32m\]\\$\[\e[m "
+# This is Bash_profile
 
-export TERM=linux
+######## Index ########
+# 1. Customizing Prompt
+# 2. History Size
+#######################
 
+# 1. Customizing Prompt
 function customps1()
 {
 	local fg_YELLOW='\e[1;33m'
@@ -19,10 +21,10 @@ function customps1()
 	fi
 	
 	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\
-\[$fg_GREEN $prompt\e[m\] "
+\[$fg_GREEN\] ${prompt}\e[m "
 }
 customps1
 
-# History memory/file size
+# 2. History Size
 HISTSIZE=10
 HISTFILESIZE=0
