@@ -21,7 +21,7 @@ function customps1()
 	fi
 	
 	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\
-\[$fg_GREEN\] ${prompt}\e[m "
+\[$fg_GREEN\] ${prompt}\[\e[m\] "
 }
 customps1
 
