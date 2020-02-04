@@ -20,11 +20,10 @@ function customps1()
 		local prompt='$'
 	fi
 	
-	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\
-\[$fg_GREEN\] ${prompt}\[\e[m\] "
+	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\[$fg_GREEN\] ${prompt}\[\e[m\] "
 }
 customps1
 
 # 2. History Size
-HISTSIZE=10
+HISTSIZE=50
 HISTFILESIZE=0
