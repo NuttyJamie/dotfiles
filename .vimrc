@@ -4,7 +4,9 @@ set nu
 set background=dark
 
 if has("syntax")
-	syntax on
+	syntax enable
+	set background=dark
+	colorscheme solarized
 endif
 
 hi TabLine		cterm=none ctermfg=Black ctermbg=grey
