@@ -20,7 +20,7 @@ function customps1()
 		local prompt='$'
 	fi
 	
-	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\[$fg_GREEN\] ${prompt}\[\e[m\] "
+	PS1="\[$fg_YELLOW\]\! \[$fg_WHITE\]\[$bg_GREEN\]\w\[$fg_GREEN\] ${prompt}\[\e[m\] \[\e[?0c\]"
 }
 customps1
 
