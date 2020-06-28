@@ -19,5 +19,6 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2 autoindent
 if has('win64')||has('win32')
 	colorscheme solarized
 	set backspace=indent,eol,start
+	set guioptions-=r "scrollbar
 endif
 
