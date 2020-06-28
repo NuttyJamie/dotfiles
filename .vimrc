@@ -2,6 +2,7 @@ set tabstop=4
 set shiftwidth=4
 set nu
 set background=dark
+set encoding=utf-8
 set fileencodings=utf-8,cp949
 
 syntax enable
