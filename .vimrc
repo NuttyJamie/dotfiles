@@ -2,6 +2,7 @@ set tabstop=4
 set shiftwidth=4
 set nu
 set background=dark
+set encoding=utf-8
 set fileencodings=utf-8,cp949
 syntax enable
 
@@ -17,6 +18,7 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2 autoindent
 
 if has('win64')||has('win32')
 	set backspace=indent,eol,start
+	set guioptions-=r "scrollbar
 endif
 
 if has("gui_running") && filereadable(expand("~/.vim/colors/solarized.vim"))
