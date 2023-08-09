@@ -1,10 +1,14 @@
+colorscheme solarized
+
+syntax enable
+
 set tabstop=4
 set shiftwidth=4
 set nu
 set background=dark
 set encoding=utf-8
 set fileencodings=utf-8,cp949
-syntax enable
+set autoindent
 
 hi TabLine		cterm=none ctermfg=Black ctermbg=grey
 hi TabLineSel	ctermfg=White ctermbg=black
@@ -18,9 +22,7 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2 autoindent
 
 if has('win64')||has('win32')
 	set backspace=indent,eol,start
-	set guioptions-=r "scrollbar
-endif
-
-if has("gui_running") && filereadable(expand("~/.vim/colors/solarized.vim"))
-	colorscheme solarized
+	set guioptions -=r "scrollbar
+	set guioptions -=m "menubar
+	set guioptions -=T "toolbar
 endif
