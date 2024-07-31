@@ -9,6 +9,7 @@ set background=dark
 set encoding=utf-8
 set fileencodings=utf-8,cp949
 set autoindent
+set cindent
 
 hi TabLine		cterm=none ctermfg=Black ctermbg=grey
 hi TabLineSel	ctermfg=White ctermbg=black
