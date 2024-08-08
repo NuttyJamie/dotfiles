@@ -8,14 +8,19 @@ if [[ ! -d "$DOTFOLDER/dotfile_backup" ]]; then
 fi
 
 #Backup existing file
-if [[ ! -f "$HOME/.vimrc" ]]; then
-	mv $HOME/.vimrc $DOTFOLDER/dotfile_backup
+if [[ ! -f "$HOME/.bash_profile" ]]; then
+	mv -vi $HOME/.bash_profile $DOTFOLDER/dotfile_backup
 fi
 
-if [[ ! -f "$HOME/.bash_profile" ]]; then
-	mv $HOME/.bash_profile ./dotfile_backup
+if [[ ! -f "$HOME/.bashrc" ]]; then
+	mv -vi $HOME/.vimrc $DOTFOLDER/dotfile_backup
+fi
+
+if [[ ! -f "$HOME/.vimrc" ]]; then
+	mv -vi $HOME/.vimrc $DOTFOLDER/dotfile_backup
 fi
 
 #Link all dotfiles to their own location
 ln -s $HOME/Projects/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/Projects/dotfiles/.bash_profile $HOME/.bash_profile
+ln -s $HOME/Projects/dotfiles/.bashrc $HOME/.bashrc

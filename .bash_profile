@@ -6,7 +6,7 @@
 # 3. Locale Setting
 # 4. Alias
 # 5. Functions
-# 6. Misc
+# 6. Input method(ibus daemon)
 #######################
 
 
@@ -37,5 +37,11 @@
 		tree -L 1;
 	}
 
-# 6. Misc
+# 6. Input method(ibus daemon)
+
+	XIM_PROGRAM="/usr/bin/ibus-daemon -drx"
+	$XIM_PROGRAM 
+
+# 7. Misc
+
 	export LESS=-MR
