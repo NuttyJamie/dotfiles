@@ -20,10 +20,3 @@ nnoremap gb :ls<CR>:b<Space>
 
 "Tabsize by file type
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 autoindent
-
-if has('win64')||has('win32')
-	set backspace=indent,eol,start
-	set guioptions -=r "scrollbar
-	set guioptions -=m "menubar
-	set guioptions -=T "toolbar
-endif
