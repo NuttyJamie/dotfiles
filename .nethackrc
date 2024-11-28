@@ -1,0 +1,111 @@
+# This is my v366-v367 setting.
+#
+# For descriptions about OPTIONS, see below.
+# https://www.nethack.org/v367/Guidebook.html#toc_9
+# https://nethackwiki.com/wiki/Options
+
+######## Index ########
+# 1. Keymapping for Vim
+# 2. Character & Pets
+# 3. Interface
+# | Enable the curses interface
+# | Statusbar config
+# | Draw animation
+# | Show Uncuresd explicitly
+# | Inverse background for piles of items
+# | Colored menus
+# | Use status hilites
+# 4. Gameplay
+# | pickup confirm
+# | Sort items by name.
+# | Walking into a door attempts to open it
+# | Save bones files.
+# | Require explicit yes for some prompts
+# | Messagetypes
+# 5. Endgame
+# 6. Misc
+#######################
+
+# 1. Keymapping for Vim
+OPTIONS=number_pad:0
+
+# 2. Character & Pets
+OPTIONS=name:NuttyJamie, gender:male
+OPTIONS=pettype:cat
+OPTIONS=catname:Cheese, horsename:Marlin
+OPTIONS=hilite_pet
+
+# 3. Interface
+# | Enable the curses interface
+#OPTIONS=windowtype:curses
+# | Statusbar config
+OPTIONS=showexp, time:true
+# | Draw animation
+timed_delay:true
+# | Show Uncuresd explicitly
+OPTIONS=!implicit_uncursed
+# | Inverse background for piles of items
+OPTIONS=hilite_pile
+# | Colored menus. Regular expressions allowed.
+OPTIONS=menucolors
+MENUCOLOR=" blessed "=green
+MENUCOLOR=" holy "=green
+MENUCOLOR=" cursed "=red
+MENUCOLOR=" unholy "=red
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
+# | Use status hilites
+OPTIONS=statushilites
+# HP
+OPTIONS=hitpointbar
+OPTIONS=hilite_status:hitpoints/100%/grey&normal
+OPTIONS=hilite_status:hitpoints/<100%/green&normal
+OPTIONS=hilite_status:hitpoints/<66%/yellow&normal
+OPTIONS=hilite_status:hitpoints/<50%/orange&normal
+OPTIONS=hilite_status:hitpoints/<33%/red&bold
+OPTIONS=hilite_status:hitpoints/<15%/red&inverse
+# Pw
+OPTIONS=hilite_status:power/100%/grey&normal
+OPTIONS=hilite_status:power/<100%/green&normal
+OPTIONS=hilite_status:power/<66%/yellow&normal
+OPTIONS=hilite_status:power/<50%/orange&normal
+OPTIONS=hilite_status:power/<33%/red&bold
+# Carry
+OPTIONS=hilite_status:cap/burdened/yellow/stressed/orange/strained/red&bold/overtaxed/red&inverse/overloaded/red&inverse&blink
+# Hunger
+OPTIONS=hilite_status:hunger/satiated/yellow/hungry/orange/weak/red&bold/fainting/red&inverse/fainted/red&inverse&blink
+# Mental
+OPTIONS=hilite_status:condition/hallu/yellow
+OPTIONS=hilite_status:condition/conf/orange
+OPTIONS=hilite_status:condition/stun/red&bold
+# Health
+OPTIONS=hilite_status:condition/termill/red&inverse
+OPTIONS=hilite_status:condition/foodpois/red&inverse
+OPTIONS=hilite_status:condition/slime/red&inverse
+# Str, Con, Dex, Int, Wis, Cha
+OPTIONS=hilite_status:characteristics/up/green/down/red
+# gold
+OPTIONS=hilite_status: gold/up/yellow/down/brown
+
+# 4. Gameplay
+# | pickup confirm
+OPTIONS=pickup_burden:B
+# | Sort items by name. One of "none", "loot", or "full"
+OPTIONS=sortloot:full
+# | Walking into a door attempts to open it
+OPTIONS=autoopen
+# | Allow saving and loading bones files.
+OPTIONS=bones
+# | Require explicit yes for some prompts
+OPTIONS=paranoid_confirmation:all
+# | Messagetypes
+MSGTYPE=hide "You swap places with your .*" 
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You are turning a little .*"
+
+# 5. Endgame
+OPTIONS=scores:10t 2a o
+
+# 6. Misc
+# | Change symbols
+#SYMBOLS=S_ghost:X

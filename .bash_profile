@@ -7,6 +7,7 @@
 # 4. Alias
 # 5. Functions
 # 6. Input method(ibus daemon)
+# 7. Misc
 #######################
 
 
@@ -44,4 +45,5 @@
 
 # 7. Misc
 
+	PATH=$PATH:$HOME/.local/bin
 	export LESS=-MR
