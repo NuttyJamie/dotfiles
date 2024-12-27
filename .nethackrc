@@ -41,7 +41,7 @@ OPTIONS=hilite_pet
 # | Statusbar config
 OPTIONS=showexp, time:true
 # | Draw animation
-timed_delay:true
+OPTIONS=timed_delay:true
 # | Show Uncuresd explicitly
 OPTIONS=!implicit_uncursed
 # | Inverse background for piles of items

@@ -1,3 +1,6 @@
+let g:solarized_visibility = "high"
+let g:solarized_termcolors = 16
+
 colorscheme solarized
 
 syntax enable
@@ -20,4 +23,4 @@ nnoremap gb :ls<CR>:b<Space>
 
 "Tabsize by file type
 autocmd FileType html 	setlocal shiftwidth=2 tabstop=2 autoindent
-autocmd FileType python setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
